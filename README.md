@@ -124,8 +124,9 @@ Results are saved to `ocr_results.xlsx` with the following columns:
 ---
 
 ## Limitations
-
 - The model is trained only on digits (0–9).  
   Separators such as `.`, `/`, `:` are not explicitly classified.
 - Requires XML bounding box annotations for region localization.
 - Performance may degrade on unseen receipt layouts or different fonts.
+- MNIST-trained model has a domain gap with real receipt handwriting — 
+  fine-tuning on receipt crops would improve accuracy further.
