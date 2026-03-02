@@ -1,7 +1,7 @@
 # Handwritten Digit OCR — Receipt Number Extraction
 
 ## Overview
-This project extracts handwritten numbers from receipt images using a custom CNN trained on MNIST, combined with OpenCV-based region detection and digit segmentation. No external OCR APIs are used.
+This project extracts handwritten numbers from receipt images using a custom CNN trained on MNIST(60,000 training / 10,000 test images), combined with OpenCV-based region detection and digit segmentation. No external OCR APIs are used.
 
 ---
 ## System Architecture
@@ -17,6 +17,10 @@ This project extracts handwritten numbers from receipt images using a custom CNN
 - Total Receipt Images Processed: **20**
 - Regions Extracted: item, total, date_time
 - Uncertainty Threshold: 0.6
+
+### Confusion Matrix
+<p align="center"><img width="658" height="547" alt="image" src="https://github.com/user-attachments/assets/43e3c6e6-8243-4838-b48c-6d2859319781" /></p>
+
 ---
 ## Project Structure
 ```
