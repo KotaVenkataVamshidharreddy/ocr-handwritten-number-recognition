@@ -105,7 +105,7 @@ pip install tensorflow opencv-python numpy pandas openpyxl matplotlib scikit-lea
 ```text
 [TOTAL     ] → 511        Confidences: [1.00, 1.00, 1.00]
 [ITEM      ] → 5481       Confidences: [1.00, 1.00, 1.00, 0.99]
-[DATE_TIME ] → 08122015   Confidences: [...]
+[DATE_TIME ] → 08122015   Confidences: [0.99, 1.00, 0.87, 1.00, 0.98, 0.99, 0.99, 1.00]
 ```
 <p align="center"><img width="1008" height="736" alt="image" src="https://github.com/user-attachments/assets/d91049bc-c6d5-49ef-9686-2360968e9c6d" /></p>
 
