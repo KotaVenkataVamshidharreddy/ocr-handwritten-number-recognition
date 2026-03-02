@@ -4,7 +4,20 @@
 This project extracts handwritten numbers from receipt images using a custom CNN trained on MNIST, combined with OpenCV-based region detection and digit segmentation. No external OCR APIs are used.
 
 ---
+## System Architecture
+<p align="center">
+  <img width="423" height="933" alt="mermaid-diagram" 
+       src="https://github.com/user-attachments/assets/a7fe54f6-cb5a-446f-b989-4a7a6caf7b33" />
+</p>
 
+---
+## Model Performance
+
+- MNIST Test Accuracy: **99.37%**
+- Total Receipt Images Processed: **20**
+- Regions Extracted: item, total, date_time
+- Uncertainty Threshold: 0.6
+---
 ## Project Structure
 ```
 SimplyFI_OCR/
@@ -82,12 +95,29 @@ pip install tensorflow opencv-python numpy pandas openpyxl matplotlib scikit-lea
 ---
 
 ## Output
-```
-[TOTAL     ] → 511        Confidences: [1.0, 1.0, 1.0] 
-[ITEM      ] → 5481       Confidences: [1.0, 1.0, 1.0, 0.99] 
-[DATE_TIME ] → 08122015   Confidences: [...] 
+
+```text
+[TOTAL     ] → 511        Confidences: [1.00, 1.00, 1.00]
+[ITEM      ] → 5481       Confidences: [1.00, 1.00, 1.00, 0.99]
+[DATE_TIME ] → 08122015   Confidences: [...]
 ```
 
-Results saved to `ocr_results.xlsx` with columns: Image, Label, Predicted Sequence, Avg Confidence, Min Confidence, Num Digits, Has Uncertain, All Confidences.
-```
+Results are saved to `ocr_results.xlsx` with the following columns:
 
+- Image  
+- Label  
+- Predicted Sequence  
+- Average Confidence  
+- Minimum Confidence  
+- Number of Digits  
+- Has Uncertain Prediction  
+- All Confidences  
+
+---
+
+## Limitations
+
+- The model is trained only on digits (0–9).  
+  Separators such as `.`, `/`, `:` are not explicitly classified.
+- Requires XML bounding box annotations for region localization.
+- Performance may degrade on unseen receipt layouts or different fonts.
