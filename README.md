@@ -9,7 +9,7 @@ This project extracts handwritten numbers from receipt images using a custom CNN
 ```
 SimplyFI_OCR/
 ├── ocr_receipts/
-│   └── archive/
+│   └── dataset/
 │       ├── images/          # 20 receipt images (0.jpg - 19.jpg)
 │       ├── annotations.xml  # Bounding box coordinates per region
 │       └── receipts.csv     # Image ID to filename mapping
