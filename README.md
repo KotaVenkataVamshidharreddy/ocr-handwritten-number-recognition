@@ -91,6 +91,9 @@ pip install tensorflow opencv-python numpy pandas openpyxl matplotlib scikit-lea
 
 **`preprocess_and_segment(crop)`**
 - Grayscale → resize → Gaussian blur → adaptive threshold → morphological closing → contour detection → returns 28×28 digit crops
+ <p align="center"> <img width="900" height="356" alt="image" src="https://github.com/user-attachments/assets/42e9067c-b151-4b50-a012-fd685fdbb2b7" />
+</p>
+
 
 **`predict_sequence(digit_crops, model)`**
 - Predicts each digit, returns sequence string + confidence list
